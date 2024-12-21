@@ -1,9 +1,9 @@
 import React, { useContext } from "react"; 
 import { View, Text, StyleSheet, Dimensions, Alert } from "react-native";
-import Button1 from "../components/Button1"; // Modifica il percorso se necessario
+import Button1 from "../components/Button1";  
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Image } from "react-native";
-import { AlertContext } from "../contexts/AlertContext"; // Importa il contesto per l'archivio degli alert
+import { AlertContext } from "../contexts/AlertContext";  
 
 export default function HomeScreen({ navigation }) {
   const { addAlert } = useContext(AlertContext); // Accedi alla funzione addAlert dal contesto
@@ -31,7 +31,7 @@ export default function HomeScreen({ navigation }) {
       <View style={styles.container}>
         <View style={styles.imageContainer}>
           <Image
-            source={require("../assets/SFH.jpg")} // Percorso dell'immagine
+            source={require("../assets/SFH.jpg")}  
             style={styles.image}
           />
         </View>
@@ -44,11 +44,11 @@ export default function HomeScreen({ navigation }) {
         </Text>
         <Button1
           title="Invia Alert"
-          onPress={sendAlert} // Funzione aggiornata per includere il pop-up
+          onPress={sendAlert}  
         />
         <View style={styles.imageContainer}>
           <Image
-            source={require("../assets/1522.png")} // Percorso dell'immagine
+            source={require("../assets/1522.png")}  
             style={styles.image}
           />
         </View>
@@ -66,13 +66,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    padding: 20, // Ho aggiunto un po' di padding per evitare che il contenuto tocchi i bordi
+    padding: 20,  
   },
   imageContainer: {
-    width: 360, // Imposta una larghezza relativa per l'immagine
-    height: 100, // Mantieni l'altezza a 100 (o regola come preferisci)
-    marginBottom: 40, // Distanza tra l'immagine e il testo
-    justifyContent: "center", // Centra l'immagine nella view
+    width: 360,  
+    height: 100,  
+    marginBottom: 40,  
+    justifyContent: "center",  
     alignItems: "center",
     overflow: "hidden",
     borderRadius: 45,
@@ -81,17 +81,17 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   image: {
-    width: "110%", // Imposta l'immagine per adattarsi alla larghezza del contenitore
-    height: "100%", // Adatta anche l'altezza
+    width: "110%",  
+    height: "100%",  
     resizeMode: "cover",
   },
   title: {
     fontFamily: "Arial",
-    fontSize: 30, // Aumentato il font per un titolo più visibile
+    fontSize: 30,  
     fontWeight: "bold",
     marginBottom: 10,
-    color: "#333", // Colore del testo
-    textAlign: "center", // Centra il testo
+    color: "#333",  
+    textAlign: "center",  
   },
   subtitle: {
     fontSize: 18,

@@ -4,11 +4,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import MapView, { Marker } from "react-native-maps";
 import * as Location from "expo-location";
 import Button1 from "../components/Button1";
-import { AlertContext } from "../contexts/AlertContext"; // Importa il contesto per gestire gli alert
+import { AlertContext } from "../contexts/AlertContext";  
 
 export default function GeoLocationScreen() {
   const [userLocation, setUserLocation] = useState(null);
-  const [aggressorLocation, setAggressorLocation] = useState(null); // Aggressore dinamico
+  const [aggressorLocation, setAggressorLocation] = useState(null); // STALKER dinamico
   const DISTANCE_THRESHOLD = 1; // Distanza critica (in km)
 
   const { addAlert } = useContext(AlertContext); // Accedi alla funzione addAlert dal contesto
@@ -41,7 +41,7 @@ export default function GeoLocationScreen() {
       },
       (location) => {
         setUserLocation(location.coords);
-        updateAggressorLocation(location.coords); // Aggiorna la posizione dell'aggressore
+        updateAggressorLocation(location.coords); // Aggiorna la posizione dello STALKR
         checkProximity(location.coords, aggressorLocation); // Controlla la vicinanza
       }
     );

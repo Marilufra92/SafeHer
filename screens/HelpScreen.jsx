@@ -12,7 +12,7 @@ import {
   TextInput,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { AlertContext } from "../contexts/AlertContext"; // Importa il contesto degli alert
+import { AlertContext } from "../contexts/AlertContext";  
 
 export default function HelpScreen() {
   const { alerts } = useContext(AlertContext); // Ottieni gli alert dal contesto
@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#f5b5f1",
   },
   scrollContainer: {
-    paddingBottom: 30, // Assicura spazio per scorrere fino alla fine
+    paddingBottom: 30,  
     alignItems: "center",
   },
   container: {
@@ -306,7 +306,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.5)", // Sfondo trasparente per il pop-up
+    backgroundColor: "rgba(0, 0, 0, 0.5)",  
   },
   chatBox: {
     width: "80%",
